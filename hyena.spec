@@ -16,7 +16,7 @@ BuildRequires:	mono-nunit
 BuildRequires:	perl-XML-Parser
 BuildRequires:	autoconf automake libtool make pkgconfig
 BuildRequires:	gtk-sharp2-devel
-Requires:	mono-core
+Requires:	mono
 Requires:	gtk-sharp2
 
 %description
