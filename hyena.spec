@@ -2,7 +2,7 @@ Name:		hyena
 License:	MIT
 Group:		System/Libraries 
 Version:	0.5
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	Library for .NET applications
 Url:		http://banshee-project.org/
 Source:		http://ftp.acc.umu.se/pub/GNOME/sources/hyena/0.5/%{name}-%{version}.tar.bz2
