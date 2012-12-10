@@ -45,3 +45,19 @@ rm -rf %{buildroot}
 %{_libdir}/pkgconfig/*.pc
 
 #% files lang -f % {name}.lang
+
+
+%changelog
+* Wed Dec 14 2011 Götz Waschk <waschk@mandriva.org> 0.5-3mdv2012.0
++ Revision: 740996
+- rebuild for gtk+ packaging breakage
+
+* Mon Oct 31 2011 Alexander Khrukin <akhrukin@mandriva.org> 0.5-2
++ Revision: 708008
+- rpmlint fixes
+- require mono fix
+
+* Mon Oct 31 2011 Alexander Khrukin <akhrukin@mandriva.org> 0.5-1
++ Revision: 708005
+- imported package hyena
+
