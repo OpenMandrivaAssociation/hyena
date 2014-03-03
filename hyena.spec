@@ -1,63 +1,43 @@
-Name:		hyena
-License:	MIT
-Group:		System/Libraries 
-Version:	0.5
-Release:	%mkrel 3
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 Summary:	Library for .NET applications
+Name:		hyena
+Version:	0.5
+Release:	4
+License:	MIT
+Group:		System/Libraries
 Url:		http://banshee-project.org/
 Source:		http://ftp.acc.umu.se/pub/GNOME/sources/hyena/0.5/%{name}-%{version}.tar.bz2
 # PATCH-FIX-UPSTREAM coolo@opensuse.org - broken Makefile syntax
 Patch0:		fix-makefile.diff
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires:	gtk-sharp2
 BuildRequires:	mono-basic
-BuildRequires:	mono-devel
 BuildRequires:	mono-nunit
 BuildRequires:	perl-XML-Parser
-BuildRequires:	autoconf automake libtool make pkgconfig
-BuildRequires:	gtk-sharp2-devel
+BuildRequires:	pkgconfig(mono)
+BuildRequires:	pkgconfig(gapi-2.0)
 Requires:	mono
 Requires:	gtk-sharp2
 
 %description
 Hyena is a .NET library that powers Banshee and PDF Mod, among others.
 
+%files
+%{_libdir}/%{name}
+%{_libdir}/pkgconfig/*.pc
+
+#----------------------------------------------------------------------------
+
 %prep
 %setup -q
 %patch0 -p1
 
 %build
-%configure 
+%configure2_5x
 make
 
 %install
-rm -rf %{buildroot}
-make install DESTDIR=%{buildroot}
-# % find_lang % {name}
+%makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
-%files
-%defattr(-, root, root)
-# % doc AUTHORS NEWS README COPYING
-%{_libdir}/%{name}
-%{_libdir}/pkgconfig/*.pc
-
-#% files lang -f % {name}.lang
-
-
-%changelog
-* Wed Dec 14 2011 Götz Waschk <waschk@mandriva.org> 0.5-3mdv2012.0
-+ Revision: 740996
-- rebuild for gtk+ packaging breakage
-
-* Mon Oct 31 2011 Alexander Khrukin <akhrukin@mandriva.org> 0.5-2
-+ Revision: 708008
-- rpmlint fixes
-- require mono fix
-
-* Mon Oct 31 2011 Alexander Khrukin <akhrukin@mandriva.org> 0.5-1
-+ Revision: 708005
-- imported package hyena
 
