@@ -4,7 +4,7 @@
 Summary:	Library for .NET applications
 Name:		hyena
 Version:	0.5
-Release:	4
+Release:	5
 License:	MIT
 Group:		System/Libraries
 Url:		http://banshee-project.org/
