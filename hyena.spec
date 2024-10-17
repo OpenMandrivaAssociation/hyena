@@ -7,7 +7,7 @@ Version:	0.5
 Release:	5
 License:	MIT
 Group:		System/Libraries
-Url:		http://banshee-project.org/
+Url:		https://banshee-project.org/
 Source:		http://ftp.acc.umu.se/pub/GNOME/sources/hyena/0.5/%{name}-%{version}.tar.bz2
 # PATCH-FIX-UPSTREAM coolo@opensuse.org - broken Makefile syntax
 Patch0:		fix-makefile.diff
