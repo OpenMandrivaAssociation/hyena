@@ -11,6 +11,11 @@ Url:		https://banshee-project.org/
 Source:		http://ftp.acc.umu.se/pub/GNOME/sources/hyena/0.5/%{name}-%{version}.tar.bz2
 # PATCH-FIX-UPSTREAM coolo@opensuse.org - broken Makefile syntax
 Patch0:		fix-makefile.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gtk-sharp2
 BuildRequires:	mono-basic
 BuildRequires:	mono-nunit
